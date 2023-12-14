@@ -1,24 +1,19 @@
 export default {
     openGraph: {
         type: 'website',
-        locale: 'en_IE',
-        title: 'next lnks by realvjy',
-        url: 'https://vjy.me',
-        description: 'Custom bio links for creatives who love coding. Made this first to use for my own weblinks vjy.me/lnk.',
         locale: 'en_EN',
-        keywords: 'designer, product designer, illustrator, indian designer, vijay verma, realvjy, illlustrations, indian illustrator, ui designer india, sushi design system, zomato designer, 3dicons, uiprint, vijay realvjy, indian ui designer, design india, overlayz, nft art',
+        title: 'Meriros Yearbook 24',
+        url: 'https://meriros.hame.my.id',
+        description: 'Menu arsip foto katalog angkatan 24.',
+        locale: 'en_EN',
+        keywords: 'arsip, yearbook, yearbook smanse 24, smanse tangguh, smanse 24, sman 11 semarang, sman 11, semarang, rainbow katalog',
         images: [
             {
                 width: 1200,
                 height: 630,
-                url: `https://vjy.me/preview.jpg`,
+                url: `https://i.imgur.com/Ahwfq56.jpg`,
             },
         ],
-        site_name: 'realvjy',
-    },
-    twitter: {
-        handle: '@realvjy',
-        site: 'vjy.me',
-        cardType: 'summary_large_image',
+        site_name: 'meriros',
     },
 };
