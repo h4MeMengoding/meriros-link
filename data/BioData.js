@@ -11,7 +11,7 @@ const bioData = [
         descShow: true,
         subdesc: 'Search by class and sort by date!',
         subdescShow: true,
-        newProductUrl: 'https://3dicons.co',
+        newProductUrl: 'https://drive.google.com/drive/folders/1T8C4ZSX_erWl4Il7eiArkJ6M6Sze7nNf?usp=sharing',
         newProduct: true,
         author: 'Ilham Shofa',
         endAuthor: 'Meriros Yerbook 24',
