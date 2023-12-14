@@ -253,7 +253,7 @@ const Title = styled.div`
       font-size: 38px;
       font-weight: 700;
       
-      letter-spacing: -2px;
+      letter-spacing: -1px;
       background: linear-gradient(90deg, #4AB1F1 5.71%, #566CEC 33.77%, #D749AF 61.82%, #FF7C51 91.21%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
