@@ -1,10 +1,10 @@
 // date: 1 Aug, 2022
 const bioData = [
     {
-        name: 'meriros vo',
+        name: 'merirosVo',
         // username: 'nxtlnk.vercel.app',
         url: 'https://nxtlnk.vercel.app',
-        titleImg: true,
+        titleImg: false,
         avatar: '/meriros.png',
         nftAvatar: true,
         description: 'Looking your photo? ',
