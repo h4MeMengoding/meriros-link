@@ -1,6 +1,7 @@
 import WebLinks from '../components/WebLinks';
 import Seo from '../components/Seo';
 import seoData from '../next-seo.config';
+// import Script from "next/script";
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
     <>
       <Seo page={page} />
       <WebLinks />
+      {/* <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} /> */}
     </>
   )
 }

@@ -8,6 +8,7 @@ import { darkTheme, lightTheme } from "../styles/theme.config";
 import { GoogleAnalytics } from "nextjs-google-analytics";
 import { DefaultSeo } from 'next-seo';
 import SEO from '../next-seo.config';
+import Script from "next/script";
 
 function MyApp({ Component, pageProps }) {
     const darkMode = useDarkMode(false, { storageKey: null, onChange: null })
@@ -22,6 +23,21 @@ function MyApp({ Component, pageProps }) {
 
     return (
         <>
+            <Script
+            strategy="lazyOnload"
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+            />
+            
+            <Script id="google-analytics-script" strategy="lazyOnload">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+          page_path: window.location.pathname,
+          });
+        `}
+        </Script>
             <GoogleAnalytics />
             <ThemeProvider theme={theme}>
                 <Head>
