@@ -10,7 +10,7 @@ const webLinks = [
     },
     {
         title: 'Youtube',
-        url: 'https://youtube.com/realvjy',
+        url: 'https://youtube.com/',
         type: 'social',
         icon: '/youtube.svg',
         on: false
