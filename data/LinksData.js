@@ -18,84 +18,84 @@ const webLinks = [
     // Photos section
     {
         title: 'XII MIPA 1',
-        url: '',
+        url: 'https://drive.google.com/drive/folders/1T8C4ZSX_erWl4Il7eiArkJ6M6Sze7nNf?usp=sharing',
         type: 'photos',
         icon: '/photos.svg',
         on: true
     },
     {
         title: 'XII MIPA 2',
-        url: '',
+        url: 'https://drive.google.com/drive/folders/1T8C4ZSX_erWl4Il7eiArkJ6M6Sze7nNf?usp=sharing',
         type: 'photos',
         icon: '/photos.svg',
         on: true
     },
     {
         title: 'XII MIPA 3',
-        url: '',
+        url: 'https://drive.google.com/drive/folders/1T8C4ZSX_erWl4Il7eiArkJ6M6Sze7nNf?usp=sharing',
         type: 'photos',
         icon: '/photos.svg',
         on: true
     },
     {
         title: 'XII MIPA 4',
-        url: '',
+        url: 'https://drive.google.com/drive/folders/1T8C4ZSX_erWl4Il7eiArkJ6M6Sze7nNf?usp=sharing',
         type: 'photos',
         icon: '/photos.svg',
         on: true
     },
     {
         title: 'XII MIPA 5',
-        url: '',
+        url: 'https://drive.google.com/drive/folders/1T8C4ZSX_erWl4Il7eiArkJ6M6Sze7nNf?usp=sharing',
         type: 'photos',
         icon: '/photos.svg',
         on: true
     },
     {
         title: 'XII MIPA 6',
-        url: '',
+        url: 'https://drive.google.com/drive/folders/1T8C4ZSX_erWl4Il7eiArkJ6M6Sze7nNf?usp=sharing',
         type: 'photos',
         icon: '/photos.svg',
         on: true
     },
     {
         title: 'XII MIPA 7',
-        url: '',
+        url: 'https://drive.google.com/drive/folders/1T8C4ZSX_erWl4Il7eiArkJ6M6Sze7nNf?usp=sharing',
         type: 'photos',
         icon: '/photos.svg',
         on: true
     },
     {
         title: 'XII IPS 1',
-        url: '',
+        url: 'https://drive.google.com/drive/folders/1T8C4ZSX_erWl4Il7eiArkJ6M6Sze7nNf?usp=sharing',
         type: 'photos',
         icon: '/photos.svg',
         on: true
     },
     {
         title: 'XII IPS 2',
-        url: '',
+        url: 'https://drive.google.com/drive/folders/1T8C4ZSX_erWl4Il7eiArkJ6M6Sze7nNf?usp=sharing',
         type: 'photos',
         icon: '/photos.svg',
         on: true
     },
     {
         title: 'XII IPS 3',
-        url: '',
+        url: 'https://drive.google.com/drive/folders/1T8C4ZSX_erWl4Il7eiArkJ6M6Sze7nNf?usp=sharing',
         type: 'photos',
         icon: '/photos.svg',
         on: true
     },
     {
         title: 'XII IPS 4',
-        url: '',
+        url: 'https://drive.google.com/drive/folders/1T8C4ZSX_erWl4Il7eiArkJ6M6Sze7nNf?usp=sharing',
         type: 'photos',
         icon: '/photos.svg',
         on: true
     },
     {
         title: 'XII IPS 5',
-        url: '',
+        url: 'https://drive.google.com/drive/folders/1T8C4ZSX_erWl4Il7eiArkJ6M6Sze7nNf?usp=sharing',
         type: 'photos',
         icon: '/photos.svg',
         on: true
