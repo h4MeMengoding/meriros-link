@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }) {
                         rel="icon"
                         href="/logo.jpg"
                         type="image/jpg"
-                        sizes="144x144"
+                        sizes="48x48"
                     />
 
                 </Head>
