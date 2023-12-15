@@ -30,22 +30,14 @@ function MyApp({ Component, pageProps }) {
                 <Head>
                     <meta content="width=device-width, initial-scale=1" name="viewport" />
                     <link rel="icon" href="/favicon.ico" />
-                    <Script
-                strategy="lazyOnload"
-                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS}`}
-                />
-                    
-                <Script id="ga-script" strategy="lazyOnload">
-                {`
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MVB6Z6HZE5"></script>
+                    <script>
                     window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
+                    function gtag(){dataLayer.push(arguments)}
                     gtag('js', new Date());
-                    gtag('config', '${process.env.GOOGLE_ANALYTICS}', {
-                    page_path: window.location.pathname,
-                    });
-                        `}
-                </Script>
-            <GoogleAnalytics />
+
+                    gtag('config', 'G-MVB6Z6HZE5');
+                    </script>
 
                 </Head>
                 <GlobalStyle />
