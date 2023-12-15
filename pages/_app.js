@@ -23,6 +23,7 @@ function MyApp({ Component, pageProps }) {
 
     return (
         <>
+        {/* GOOGLE ANLY */}
         <Script
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS}`}
@@ -39,6 +40,7 @@ function MyApp({ Component, pageProps }) {
                 `}
         </Script>
             <GoogleAnalytics />
+        {/* END GOOGLE ANLY */}
             <ThemeProvider theme={theme}>
                 <Head>
                     <meta content="width=device-width, initial-scale=1" name="viewport" />
