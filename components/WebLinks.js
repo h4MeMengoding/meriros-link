@@ -10,8 +10,6 @@ import { ChevronRightIcon, HexIcon, HomeIcon, TwitterIcon, NewUp, OvalIcon } fro
 import allLinks from "../data/LinksData";
 import bioData from "../data/BioData";
 
-
-
 const Links = () => {
 
   // all user info from bioData
@@ -29,7 +27,7 @@ const Links = () => {
   const endAuthor = bioData[0].endAuthor;
   const authorURL = bioData[0].authorURL;
   const endText = bioData[0].endText;
-  const titleImage = "/title.svg";
+  const titleImage = "/logo.png";
 
   // Check what class to use oval or hex for avatar
   const avatarShape = bioData[0].nftAvatar ? `nft-clipped` : `oval-clipped`
@@ -283,11 +281,11 @@ const Title = styled.div`
       }
     }
     .handle{
-      height: 32px;
+      height: 62px;
       margin-top: 6px;
       margin-bottom: 6px;
       @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
-        height: 26px;
+        height: 56px;
       }
     }
 `

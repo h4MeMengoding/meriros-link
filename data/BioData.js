@@ -4,7 +4,7 @@ const bioData = [
         name: 'merirosVo',
         // username: 'nxtlnk.vercel.app',
         url: 'https://nxtlnk.vercel.app',
-        titleImg: false,
+        titleImg: true,
         avatar: '/meriros.png',
         nftAvatar: true,
         description: 'Looking your photo? ',
