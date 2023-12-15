@@ -24,8 +24,6 @@ function MyApp({ Component, pageProps }) {
 
     return (
         <>
-
-        <SpeedInsights />
             <Script
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
@@ -77,6 +75,7 @@ function MyApp({ Component, pageProps }) {
                     {isMounted && <Component {...pageProps} />}
                 </Layout>
             </ThemeProvider>
+            <SpeedInsights />
         </>
 
     )
