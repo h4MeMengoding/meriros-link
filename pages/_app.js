@@ -9,7 +9,6 @@ import { GoogleAnalytics } from "nextjs-google-analytics";
 import { DefaultSeo } from 'next-seo';
 import SEO from '../next-seo.config';
 import Script from "next/script";
-import { SpeedInsights } from '@vercel/speed-insights/next';
 
 function MyApp({ Component, pageProps }) {
     const darkMode = useDarkMode(false, { storageKey: null, onChange: null })
@@ -75,7 +74,6 @@ function MyApp({ Component, pageProps }) {
                     {isMounted && <Component {...pageProps} />}
                 </Layout>
             </ThemeProvider>
-            <SpeedInsights />
         </>
 
     )
