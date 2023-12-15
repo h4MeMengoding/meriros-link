@@ -24,27 +24,28 @@ function MyApp({ Component, pageProps }) {
     return (
         <>
         {/* GOOGLE ANLY */}
-        <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS}`}
-        />
-            
-        <Script id="ga-script" strategy="lazyOnload">
-        {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.GOOGLE_ANALYTICS}', {
-            page_path: window.location.pathname,
-            });
-                `}
-        </Script>
-            <GoogleAnalytics />
+
         {/* END GOOGLE ANLY */}
             <ThemeProvider theme={theme}>
                 <Head>
                     <meta content="width=device-width, initial-scale=1" name="viewport" />
                     <link rel="icon" href="/favicon.ico" />
+                    <Script
+                strategy="lazyOnload"
+                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS}`}
+                />
+                    
+                <Script id="ga-script" strategy="lazyOnload">
+                {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${process.env.GOOGLE_ANALYTICS}', {
+                    page_path: window.location.pathname,
+                    });
+                        `}
+                </Script>
+            <GoogleAnalytics />
 
                 </Head>
                 <GlobalStyle />
