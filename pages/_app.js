@@ -30,14 +30,6 @@ function MyApp({ Component, pageProps }) {
                 <Head>
                     <meta content="width=device-width, initial-scale=1" name="viewport" />
                     <link rel="icon" href="/favicon.ico" />
-                    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MVB6Z6HZE5"></script>
-                    <script>
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments)}
-                    gtag('js', new Date());
-
-                    gtag('config', 'G-MVB6Z6HZE5');
-                    </script>
 
                 </Head>
                 <GlobalStyle />
