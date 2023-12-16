@@ -6,7 +6,7 @@ const webLinks = [
         url: 'https://instagram.com/',
         type: 'social',
         icon: '/insta.svg',
-        on: true
+        on: false
     },
     {
         title: 'Youtube',
@@ -102,8 +102,8 @@ const webLinks = [
     },
 
     {
-        title: 'CAS (Soon)',
-        url: 'https://www.youtube.com/',
+        title: 'Catatan Akhir Sekolah',
+        url: '/soon',
         type: 'other',
         icon: '/yt-white.png',
         on: true

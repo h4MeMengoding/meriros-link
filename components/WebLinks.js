@@ -151,12 +151,12 @@ const Links = () => {
                       {/* BioData.js > newProduct == true */}
                       {/* New Section will render once newProduct == true */}
                       {(newProduct) ? <NewSection>
-                        <a href={newProductUrl} target="_blank" rel="noreferrer">
+                        {/* <a href={newProductUrl} target="_blank" rel="noreferrer"> */}
                           <img
                               src={'/banner.png'}
-                              className="newproduct"
+                              className="banner"
                           />
-                        </a>
+                        {/* </a> */}
                       </NewSection> : ''
                       }
                       {/* End Biodata.js, You can move this section anywhere */}

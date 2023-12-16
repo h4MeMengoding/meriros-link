@@ -4,7 +4,7 @@ export default {
         locale: 'en_EN',
         title: 'Meriros Yearbook 24',
         url: 'https://rosvo.hame.my.id',
-        description: 'Link arsip foto katalog angkatan 24.',
+        description: 'SMAN 11 Semarang Yearbook Photos.',
         locale: 'en_EN',
         keywords: 'arsip, yearbook, yearbook smanse 24, smanse tangguh, smanse 24, sman 11 semarang, sman 11, semarang, rainbow katalog, link yearbook, link smanse, link foto katalog smanse, yearbook semarang, yearbook 2023, yearbook 2024, osis smanse, osis sman 11 semarang, osis sman 11',
         images: [
@@ -14,6 +14,6 @@ export default {
                 url: `https://i.imgur.com/Ahwfq56.jpg`,
             },
         ],
-        site_name: 'meriros',
+        site_name: 'rosvo',
     },
 };
