@@ -26,6 +26,7 @@ const Links = () => {
   const footerText = bioData[0].footerText;
   const author = bioData[0].author;
   const endAuthor = bioData[0].endAuthor;
+  const endAuthorURL = bioData[0].endAuthorURL;
   const authorURL = bioData[0].authorURL;
   const endText = bioData[0].endText;
   const titleImage = "/logo.png";
@@ -180,7 +181,7 @@ const Links = () => {
           </TopPart>
           <BottomPart>
             <LinkFoot>
-              <h4>{footerText} <a href={authorURL}>{author}</a> {endText} <a href={authorURL}>{endAuthor}</a></h4>
+              <h4>{footerText} <a href={authorURL}>{author}</a> {endText} <a href={endAuthorURL}>{endAuthor}</a></h4>
             </LinkFoot>
           </BottomPart>
 
