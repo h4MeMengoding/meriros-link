@@ -5,7 +5,7 @@ import { Container } from "../../components/ReusableStyles";
 import { HexIcon, NewUp, OvalIcon } from '../../components/icons';
 import bioData from "../../data/BioData";
 
-const Mipa5 = () => {
+const Mipa6 = () => {
 
   // all user info from bioData
   const name = bioData[0].name;
@@ -41,7 +41,7 @@ const Mipa5 = () => {
 
   // Get data for photos section
   const photos = allLinks.filter((el) => {
-    return el.type === "photos - mipa 5" && el.on
+    return el.type === "photos - mipa 6" && el.on
   });
 
   return (
@@ -137,7 +137,7 @@ const Mipa5 = () => {
   )
 };
 
-export default Mipa5;
+export default Mipa6;
 
 const LinkWrapper = styled(Container)`
 `

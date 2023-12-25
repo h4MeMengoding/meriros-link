@@ -53,7 +53,11 @@ const Links = () => {
 
   // Get data for photos section
   const photos = allLinks.filter((el) => {
-    return el.type === "photos" && el.on
+    return el.type === "class photos" && el.on
+  });
+  
+  const photosOther = allLinks.filter((el) => {
+    return el.type === "other photos" && el.on
   });
 
   // Get data for photos
@@ -131,6 +135,26 @@ const Links = () => {
                       <h3>{photos[0].type}</h3>
                       {
                         photos.map((i) => {
+                          return (
+                              <Link href={i.url} key={i.title} rel="noreferrer" className="text-center">
+                                <LinkBox>
+                                  <LinkTitle><img src={i.icon} style={{ filter: 'var(--img)' }} /> {i.title}</LinkTitle> <NewUp />
+                                </LinkBox>
+                              </Link>
+                          )
+                        })
+                      }
+                    </LinkSection> : ''
+              }
+              {/* End Photos Section */}
+
+              {/* PhotosOther Section */}
+              {
+                photosOther.length > 0 ?
+                    <LinkSection>
+                      <h3>{photosOther[0].type}</h3>
+                      {
+                        photosOther.map((i) => {
                           return (
                               <Link href={i.url} key={i.title} rel="noreferrer">
                                 <LinkBox>
