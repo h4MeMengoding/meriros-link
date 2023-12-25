@@ -3,7 +3,6 @@ import Seo from '../components/Seo';
 import seoData from '../next-seo.config';
 import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 
 
 export default function Home() {
@@ -27,7 +26,6 @@ export default function Home() {
           gtag('config', 'G-MVB6Z6HZE5');
         `}
       </Script>
-      <SpeedInsights />
       <Analytics />
     </>
   )
