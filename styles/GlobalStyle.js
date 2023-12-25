@@ -96,7 +96,6 @@ a{
   transform: translate(-50%, -50%);
 }
 
-   
 `;
 
 export default GlobalStyle;

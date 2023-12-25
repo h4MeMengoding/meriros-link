@@ -18,49 +18,49 @@ const webLinks = [
     // Photos section
     {
         title: 'XII MIPA 1',
-        url: 'https://drive.google.com/drive/folders/1T8C4ZSX_erWl4Il7eiArkJ6M6Sze7nNf?usp=sharing',
+        url: '/kelas/mipa-1',
         type: 'photos',
         icon: '/photos.svg',
         on: true
     },
     {
         title: 'XII MIPA 2',
-        url: 'https://drive.google.com/drive/folders/1T8C4ZSX_erWl4Il7eiArkJ6M6Sze7nNf?usp=sharing',
+        url: '/kelas/mipa-2',
         type: 'photos',
         icon: '/photos.svg',
         on: true
     },
     {
         title: 'XII MIPA 3',
-        url: 'https://drive.google.com/drive/folders/1T8C4ZSX_erWl4Il7eiArkJ6M6Sze7nNf?usp=sharing',
+        url: '/kelas/mipa-3',
         type: 'photos',
         icon: '/photos.svg',
         on: true
     },
     {
         title: 'XII MIPA 4',
-        url: 'https://drive.google.com/drive/folders/1T8C4ZSX_erWl4Il7eiArkJ6M6Sze7nNf?usp=sharing',
+        url: '/kelas/mipa-4',
         type: 'photos',
         icon: '/photos.svg',
         on: true
     },
     {
         title: 'XII MIPA 5',
-        url: 'https://drive.google.com/drive/folders/1T8C4ZSX_erWl4Il7eiArkJ6M6Sze7nNf?usp=sharing',
+        url: '/kelas/mipa-5',
         type: 'photos',
         icon: '/photos.svg',
         on: true
     },
     {
         title: 'XII MIPA 6',
-        url: 'https://drive.google.com/drive/folders/1T8C4ZSX_erWl4Il7eiArkJ6M6Sze7nNf?usp=sharing',
+        url: '/kelas/mipa-6',
         type: 'photos',
         icon: '/photos.svg',
         on: true
     },
     {
         title: 'XII MIPA 7',
-        url: 'https://drive.google.com/drive/folders/1T8C4ZSX_erWl4Il7eiArkJ6M6Sze7nNf?usp=sharing',
+        url: '/kelas/mipa-7',
         type: 'photos',
         icon: '/photos.svg',
         on: true

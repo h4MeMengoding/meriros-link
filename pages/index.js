@@ -2,6 +2,7 @@ import WebLinks from '../components/WebLinks';
 import Seo from '../components/Seo';
 import seoData from '../next-seo.config';
 import Script from 'next/script'
+import Link from 'next/link'
 
 
 export default function Home() {

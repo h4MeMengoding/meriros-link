@@ -132,11 +132,11 @@ const Links = () => {
                       {
                         photos.map((i) => {
                           return (
-                              <a href={i.url} key={i.title} target="_blank" rel="noreferrer">
+                              <Link href={i.url} key={i.title} rel="noreferrer">
                                 <LinkBox>
                                   <LinkTitle><img src={i.icon} style={{ filter: 'var(--img)' }} /> {i.title}</LinkTitle> <NewUp />
                                 </LinkBox>
-                              </a>
+                              </Link>
                           )
                         })
                       }
