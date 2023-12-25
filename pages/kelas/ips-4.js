@@ -1,17 +1,11 @@
-// Weblinks Page Sections
-// created by @realvjy
-// date: 29 Jul, 2022
-
-import Image from "next/image";
 import styled from "styled-components";
-import { Button, ButtonLink, Container, StyledLink } from "./ReusableStyles";
+import allLinks from "./LinkData-kelas";
 import Link from "next/link";
-import { ChevronRightIcon, HexIcon, HomeIcon, TwitterIcon, NewUp, OvalIcon } from './icons';
-import allLinks from "../data/LinksData";
-import bioData from "../data/BioData";
-import { motion } from "framer-motion"
+import { Container } from "../../components/ReusableStyles";
+import { HexIcon, NewUp, OvalIcon } from '../../components/icons';
+import bioData from "../../data/BioData";
 
-const Links = () => {
+const Ips4 = () => {
 
   // all user info from bioData
   const name = bioData[0].name;
@@ -39,12 +33,6 @@ const Links = () => {
   const descriptionText = descShow ? description : `Write your own fall back text if description not in BioData.js or remove me/leave blank`
   const subdescText = subdescShow ? subdesc : `Write your own if you want or just remove me/leave blank`
 
-
-  const newProduct = bioData[0].newProduct; // checking for newProduct flag true false
-  const newProductUrl = bioData[0].newProductUrl; // get product url if available
-
-
-
   // Collect all links filter by type - social, project, nft and other etc=
   // get data for social section
   const social = allLinks.filter((el) => {
@@ -53,21 +41,7 @@ const Links = () => {
 
   // Get data for photos section
   const photos = allLinks.filter((el) => {
-    return el.type === "class photos" && el.on
-  });
-  
-  const photosOther = allLinks.filter((el) => {
-    return el.type === "other photos" && el.on
-  });
-
-  // Get data for photos
-  const nfts = allLinks.filter((el) => {
-    return el.type === "nft" && el.on
-  });
-
-  // Get data for other section
-  const others = allLinks.filter((el) => {
-    return el.type === "other" && el.on
+    return el.type === "photos - ips 4" && el.on
   });
 
   return (
@@ -147,59 +121,7 @@ const Links = () => {
                     </LinkSection> : ''
               }
               {/* End Photos Section */}
-
-              {/* PhotosOther Section */}
-              {
-                photosOther.length > 0 ?
-                    <LinkSection>
-                      <h3>{photosOther[0].type}</h3>
-                      {
-                        photosOther.map((i) => {
-                          return (
-                              <Link href={i.url} key={i.title} rel="noreferrer">
-                                <LinkBox>
-                                  <LinkTitle><img src={i.icon} style={{ filter: 'var(--img)' }} /> {i.title}</LinkTitle> <NewUp />
-                                </LinkBox>
-                              </Link>
-                          )
-                        })
-                      }
-                    </LinkSection> : ''
-              }
-              {/* End Photos Section */}
-
-              {/* Other Section */}
-              {
-                others.length > 0 ?
-                    <LinkSection>
-                      <h3>{others[0].type}</h3>
-                      {/* BioData.js > newProduct == true */}
-                      {/* New Section will render once newProduct == true */}
-                      {(newProduct) ? <NewSection>
-                        {/* <a href={newProductUrl} target="_blank" rel="noreferrer"> */}
-                          <img
-                              src={'/banner.png'}
-                              className="banner"
-                          />
-                        {/* </a> */}
-                      </NewSection> : ''
-                      }
-                      {/* End Biodata.js, You can move this section anywhere */}
-                      {
-                        others.map((i) => {
-                          return (
-                              <a href={i.url} key={i.title} target="_blank" rel="noreferrer">
-                                <LinkBox>
-                                  <LinkTitle><img src={i.icon} /> {i.title}</LinkTitle> <NewUp />
-                                </LinkBox>
-                              </a>
-                          )
-                        })
-                      }
-                    </LinkSection> : ''
-              }
-              {/* End Other Section */}
-
+                <Link href='/'>Back</Link>
             </WebLinkWrap>
             {/* End Weblinks */}
           </TopPart>
@@ -215,10 +137,11 @@ const Links = () => {
   )
 };
 
-export default Links;
+export default Ips4;
 
 const LinkWrapper = styled(Container)`
 `
+
 const LinkContainer = styled.div`
     min-height: 100vh;
     display: flex;
@@ -510,20 +433,5 @@ text-align: center;
     img{
       height: 20px;
       margin-right: 10px;
-    }
-`
-
-const NewSection = styled.div`
-  display: flex;
-  align-items: center;
-  padding: 16px 20px;
-    img{
-      width: 100%;
-      border: 1px solid ${({ theme }) => theme.bg.secondary};
-      border-radius: 12px;
-      cursor: pointer;
-      &:hover{
-       transform: scale(1.01);
-      }
     }
 `
