@@ -2,7 +2,7 @@ import WebLinks from '../components/WebLinks';
 import Seo from '../components/Seo';
 import seoData from '../next-seo.config';
 import Script from 'next/script'
-import Link from 'next/link'
+import { Analytics } from '@vercel/analytics/react';
 
 
 export default function Home() {
@@ -26,6 +26,7 @@ export default function Home() {
           gtag('config', 'G-MVB6Z6HZE5');
         `}
       </Script>
+      <Analytics />
     </>
   )
 }
