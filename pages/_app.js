@@ -7,7 +7,6 @@ import GlobalStyle from "../styles/GlobalStyle";
 import { darkTheme, lightTheme } from "../styles/theme.config";
 import { DefaultSeo } from 'next-seo';
 import SEO from '../next-seo.config';
-import Script from "next/script";
 
 function MyApp({ Component, pageProps }) {
     const darkMode = useDarkMode(false, { storageKey: null, onChange: null })
