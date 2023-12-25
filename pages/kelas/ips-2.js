@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import allLinks from "./LinkData-kelas";
+import allLinks from "../../data/LinkData-kelas";
 import Link from "next/link";
 import { Container } from "../../components/ReusableStyles";
 import { HexIcon, NewUp, OvalIcon } from '../../components/icons';
