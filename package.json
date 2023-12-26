@@ -12,6 +12,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@react-three/fiber": "^8.2.1",
     "@vercel/analytics": "^1.1.1",
     "framer-motion": "^10.16.16",

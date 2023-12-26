@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<sitemap><loc>https://rosvo.hame.my.id/sitemap-0.xml</loc></sitemap>
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://rosvo.hame.my.id</loc><lastmod>2023-12-26T01:33:22.882Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rosvo.hame.my.id/kelas/mipa-1</loc><lastmod>2023-12-26T01:33:22.883Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rosvo.hame.my.id/kelas/mipa-2</loc><lastmod>2023-12-26T01:33:22.883Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rosvo.hame.my.id/kelas/mipa-3</loc><lastmod>2023-12-26T01:33:22.883Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rosvo.hame.my.id/kelas/mipa-4</loc><lastmod>2023-12-26T01:33:22.883Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rosvo.hame.my.id/kelas/mipa-5</loc><lastmod>2023-12-26T01:33:22.883Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rosvo.hame.my.id/kelas/mipa-6</loc><lastmod>2023-12-26T01:33:22.883Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rosvo.hame.my.id/kelas/mipa-7</loc><lastmod>2023-12-26T01:33:22.883Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rosvo.hame.my.id/kelas/ips-1</loc><lastmod>2023-12-26T01:33:22.883Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rosvo.hame.my.id/kelas/ips-2</loc><lastmod>2023-12-26T01:33:22.883Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rosvo.hame.my.id/kelas/ips-3</loc><lastmod>2023-12-26T01:33:22.883Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rosvo.hame.my.id/kelas/ips-4</loc><lastmod>2023-12-26T01:33:22.883Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://rosvo.hame.my.id/kelas/ips-5</loc><lastmod>2023-12-26T01:33:22.883Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+</urlset>
