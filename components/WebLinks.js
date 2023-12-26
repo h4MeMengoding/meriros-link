@@ -138,7 +138,8 @@ const Links = () => {
                           return (
                               <Link href={i.url} key={i.title} rel="noreferrer" className="text-center">
                                 <LinkBox>
-                                  <LinkTitle><img src={i.icon} style={{ filter: 'var(--img)' }} /> {i.title}</LinkTitle> <NewUp />
+                                  <LinkTitle><img src={i.icon} style={{ filter: 'var(--img)' }} />
+                                  </LinkTitle> {i.title}<NewUp />
                                 </LinkBox>
                               </Link>
                           )
@@ -401,7 +402,7 @@ const LinkFoot = styled.div`
 
 const WebLinkWrap = styled.div`
     @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
-       padding: 0 12px;
+       padding: 0 18px;
     }
 `
 
@@ -500,7 +501,6 @@ const LinkBox = styled.div`
     }
 `
 const LinkTitle = styled.p`
-text-align: center;
   display: flex;
   font-size: 18px;
   align-items: center;

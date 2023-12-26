@@ -112,7 +112,7 @@ const Mipa1 = () => {
                           return (
                               <Link href={i.url} key={i.title} rel="noreferrer" className="text-center">
                                 <LinkBox>
-                                  <LinkTitle><img src={i.icon} style={{ filter: 'var(--img)' }} /> {i.title}</LinkTitle> <NewUp />
+                                  <LinkTitle><img src={i.icon} style={{ filter: 'var(--img)' }} /></LinkTitle> {i.title} <NewUp />
                                 </LinkBox>
                               </Link>
                           )
