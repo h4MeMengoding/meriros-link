@@ -5,6 +5,7 @@ import Link from "next/link";
 import { HexIcon, NewUp, OvalIcon } from './icons';
 import allLinks from "../data/LinksData";
 import bioData from "../data/BioData";
+import Album from '../public/album';
 
 const Links = () => {
 
@@ -138,7 +139,7 @@ const Links = () => {
                           return (
                               <Link href={i.url} key={i.title} rel="noreferrer" className="text-center">
                                 <LinkBox>
-                                  <LinkTitle><img alt="rosvo-icon-album" src={i.icon} style={{ filter: 'var(--img)' }} />
+                                  <LinkTitle><img alt="rosvo-icon-album" src={i.icon} />
                                   </LinkTitle> {i.title}<NewUp />
                                 </LinkBox>
                               </Link>

@@ -12,10 +12,10 @@ function MyApp({ Component, pageProps }) {
     const darkMode = useDarkMode(false, { storageKey: null, onChange: null })
     const [isMounted, setIsMounted] = useState(false)
 
-    const [theme, setTheme] = useState("light")
+    const [theme, setTheme] = useState("dark")
 
     const themeToggler = () => {
-        theme === "light" ? setTheme("darkTheme") : setTheme("light")
+        theme === "dark" ? setTheme("lightTheme") : setTheme("dark")
     }
     // const theme = darkMode.value ? darkTheme : lightTheme;
 
@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
 
     return (
         <>
-            <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+            <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
                 <Head>
                     <meta content="width=device-width, initial-scale=1" name="viewport" />
                     <link
