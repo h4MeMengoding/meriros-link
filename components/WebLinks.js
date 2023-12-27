@@ -5,7 +5,6 @@ import Link from "next/link";
 import { HexIcon, NewUp, OvalIcon } from './icons';
 import allLinks from "../data/LinksData";
 import bioData from "../data/BioData";
-import Headroom from "react-headroom";
 
 const Links = () => {
 
@@ -86,7 +85,6 @@ const Links = () => {
                 </AvatarWrap>
               </Avatar>
               <Title>
-                <Headroom>
                 {/* Using titleimg flag to use image as title or text */}
                 {titleImg ?
                     <img
@@ -100,7 +98,6 @@ const Links = () => {
                 {
                   username ? <h3><a href={`${url}`}>{username}</a></h3> : ''
                 }
-                </Headroom>
               </Title>
             </LinkHeader>
 
