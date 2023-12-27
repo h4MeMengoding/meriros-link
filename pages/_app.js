@@ -12,8 +12,12 @@ function MyApp({ Component, pageProps }) {
     const darkMode = useDarkMode(false, { storageKey: null, onChange: null })
     const [isMounted, setIsMounted] = useState(false)
 
-    // const [theme, setTheme] = useState(lightTheme)
-    const theme = darkMode.value ? darkTheme : lightTheme;
+    const [theme, setTheme] = useState("light")
+
+    const themeToggler = () => {
+        theme === "light" ? setTheme("darkTheme") : setTheme("light")
+    }
+    // const theme = darkMode.value ? darkTheme : lightTheme;
 
     useEffect(() => {
         setIsMounted(true);
@@ -21,7 +25,7 @@ function MyApp({ Component, pageProps }) {
 
     return (
         <>
-            <ThemeProvider theme={theme}>
+            <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
                 <Head>
                     <meta content="width=device-width, initial-scale=1" name="viewport" />
                     <link
@@ -32,6 +36,7 @@ function MyApp({ Component, pageProps }) {
                     />
 
                 </Head>
+                <button onClick={() => themeToggler()}>Theme</button>
                 <GlobalStyle />
                 <Layout>
                     <DefaultSeo
