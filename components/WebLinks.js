@@ -1,15 +1,11 @@
-// Weblinks Page Sections
-// created by @realvjy
-// date: 29 Jul, 2022
 
-import Image from "next/image";
 import styled from "styled-components";
-import { Button, ButtonLink, Container, StyledLink } from "./ReusableStyles";
+import { Container } from "./ReusableStyles";
 import Link from "next/link";
-import { ChevronRightIcon, HexIcon, HomeIcon, TwitterIcon, NewUp, OvalIcon } from './icons';
+import { HexIcon, NewUp, OvalIcon } from './icons';
 import allLinks from "../data/LinksData";
 import bioData from "../data/BioData";
-import { motion } from "framer-motion"
+import Headroom from "react-headroom";
 
 const Links = () => {
 
@@ -85,19 +81,26 @@ const Links = () => {
                   <img
                       src={avatarImg}
                       className={avatarShape}
+                      aria-label="owl-rosvo-logo"
                   />
                 </AvatarWrap>
               </Avatar>
               <Title>
+                <Headroom>
                 {/* Using titleimg flag to use image as title or text */}
                 {titleImg ?
-                    <img src={titleImage} className="handle" /> :
+                    <img
+                      src={titleImage}
+                      className="handle"
+                      aria-label="rosvo-txt"
+                      /> :
                     <h1>{name}</h1>
                 }
                 {/* if your remove username from data it will not appear */}
                 {
                   username ? <h3><a href={`${url}`}>{username}</a></h3> : ''
                 }
+                </Headroom>
               </Title>
             </LinkHeader>
 
@@ -138,7 +141,7 @@ const Links = () => {
                           return (
                               <Link href={i.url} key={i.title} rel="noreferrer" className="text-center">
                                 <LinkBox>
-                                  <LinkTitle><img src={i.icon} style={{ filter: 'var(--img)' }} />
+                                  <LinkTitle><img alt="rosvo-icon-album" src={i.icon} style={{ filter: 'var(--img)' }} />
                                   </LinkTitle> {i.title}<NewUp />
                                 </LinkBox>
                               </Link>
@@ -159,7 +162,7 @@ const Links = () => {
                           return (
                               <Link href={i.url} key={i.title} rel="noreferrer">
                                 <LinkBox>
-                                  <LinkTitle><img src={i.icon} style={{ filter: 'var(--img)' }} /> {i.title}</LinkTitle> <NewUp />
+                                  <LinkTitle><img alt="rosvo-icon-album" src={i.icon} style={{ filter: 'var(--img)' }} /></LinkTitle> {i.title} <NewUp />
                                 </LinkBox>
                               </Link>
                           )
@@ -181,6 +184,7 @@ const Links = () => {
                           <img
                               src={'/banner.png'}
                               className="banner"
+                              alt="rosvo-banner"
                           />
                         {/* </a> */}
                       </NewSection> : ''
@@ -191,7 +195,7 @@ const Links = () => {
                           return (
                               <a href={i.url} key={i.title} target="_blank" rel="noreferrer">
                                 <LinkBox>
-                                  <LinkTitle><img src={i.icon} /> {i.title}</LinkTitle> <NewUp />
+                                  <LinkTitle><img alt="rosvo-icon-youtube" src={i.icon} /></LinkTitle> {i.title} <NewUp />
                                 </LinkBox>
                               </a>
                           )
