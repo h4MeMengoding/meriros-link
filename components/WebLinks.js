@@ -158,7 +158,7 @@ const Links = () => {
                           return (
                               <Link href={i.url} key={i.title} rel="noreferrer">
                                 <LinkBox>
-                                  <LinkTitle><img alt="rosvo-icon-album" src={i.icon} style={{ filter: 'var(--img)' }} /></LinkTitle> {i.title} <NewUp />
+                                  <LinkTitle><img alt="rosvo-icon-album" src={i.icon} /></LinkTitle> {i.title} <NewUp />
                                 </LinkBox>
                               </Link>
                           )
