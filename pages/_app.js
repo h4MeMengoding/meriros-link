@@ -1,23 +1,24 @@
 import { useState, useEffect } from "react"
 import useDarkMode from "use-dark-mode"
 import Head from "next/head";
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider, styled } from "styled-components";
 import Layout from "../components/Layout";
 import GlobalStyle from "../styles/GlobalStyle";
 import { darkTheme, lightTheme } from "../styles/theme.config";
 import { DefaultSeo } from 'next-seo';
 import SEO from '../next-seo.config';
+import FAB from '../components/FloatingButton'
 
 function MyApp({ Component, pageProps }) {
     const darkMode = useDarkMode(false, { storageKey: null, onChange: null })
     const [isMounted, setIsMounted] = useState(false)
 
-    const [theme, setTheme] = useState("dark")
+    // const [theme, setTheme] = useState("dark")
 
-    const themeToggler = () => {
-        theme === "dark" ? setTheme("lightTheme") : setTheme("dark")
-    }
-    // const theme = darkMode.value ? darkTheme : lightTheme;
+    // const themeToggler = () => {
+    //     theme === "dark" ? setTheme("lightTheme") : setTheme("dark")
+    // }
+    const theme = darkMode.value ? darkTheme : lightTheme;
 
     useEffect(() => {
         setIsMounted(true);
@@ -25,7 +26,8 @@ function MyApp({ Component, pageProps }) {
 
     return (
         <>
-            <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}>
+            {/* <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}> */}
+            <ThemeProvider theme={theme}>
                 <Head>
                     <meta content="width=device-width, initial-scale=1" name="viewport" />
                     <link
@@ -36,7 +38,7 @@ function MyApp({ Component, pageProps }) {
                     />
 
                 </Head>
-                <button onClick={() => themeToggler()}>Theme</button>
+                {/* <button onClick={() => themeToggler()}>Theme</button> */}
                 <GlobalStyle />
                 <Layout>
                     <DefaultSeo

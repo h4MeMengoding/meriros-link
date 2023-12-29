@@ -1,11 +1,9 @@
-
 import styled from "styled-components";
 import { Container } from "./ReusableStyles";
 import Link from "next/link";
 import { HexIcon, NewUp, OvalIcon } from './icons';
 import allLinks from "../data/LinksData";
 import bioData from "../data/BioData";
-import Album from '../public/album';
 
 const Links = () => {
 
@@ -104,7 +102,7 @@ const Links = () => {
 
             {/* Bio Section */}
             <LinkBio>
-              {description && <h1>{descriptionText} </h1>}
+              {description && <h1>{descriptionText}</h1>}
               {subdesc && <h4>{subdescText}</h4>}
             </LinkBio>
             {/* End Bio Section */}
@@ -160,7 +158,7 @@ const Links = () => {
                           return (
                               <Link href={i.url} key={i.title} rel="noreferrer">
                                 <LinkBox>
-                                  <LinkTitle><img alt="rosvo-icon-album" src={i.icon} style={{ filter: 'var(--img)' }} /></LinkTitle> {i.title} <NewUp />
+                                  <LinkTitle><img alt="rosvo-icon-album" src={i.icon} /></LinkTitle> {i.title} <NewUp />
                                 </LinkBox>
                               </Link>
                           )
