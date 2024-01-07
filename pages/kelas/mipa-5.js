@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Container } from "../../components/ReusableStyles";
 import { HexIcon, NewUp, OvalIcon } from '../../components/icons';
 import bioData from "../../data/BioData";
+import Head from "next/head";
 
 const Mipa5 = () => {
 
@@ -46,6 +47,9 @@ const Mipa5 = () => {
 
   return (
       <LinkWrapper>
+      <Head>
+        <title>ROSVO | MIPA 5</title>
+      </Head>
         <LinkContainer>
           <TopPart>
             <LinkHeader>
@@ -110,11 +114,11 @@ const Mipa5 = () => {
                       {
                         photos.map((i) => {
                           return (
-                              <Link href={i.url} key={i.title} rel="noreferrer" className="text-center">
-                                <LinkBox>
-                                  <LinkTitle><img src={i.icon} style={{ filter: 'var(--img)' }} /></LinkTitle> {i.title} <NewUp />
-                                </LinkBox>
-                              </Link>
+                            <a href={i.url} key={i.title} target="_blank" rel="noreferrer" className="text-center">
+                              <LinkBox>
+                                <LinkTitle><img src={i.icon} style={{ filter: 'var(--img)' }} /></LinkTitle> {i.title} <NewUp />
+                              </LinkBox>
+                            </a>
                           )
                         })
                       }

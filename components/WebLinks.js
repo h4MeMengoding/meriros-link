@@ -189,7 +189,7 @@ const Links = () => {
                       {
                         others.map((i) => {
                           return (
-                              <a href={i.url} key={i.title} target="_blank" rel="noreferrer">
+                              <a href={i.url} key={i.title} rel="noreferrer">
                                 <LinkBox>
                                   <LinkTitle><img alt="rosvo-icon-youtube" src={i.icon} /></LinkTitle> {i.title} <NewUp />
                                 </LinkBox>
