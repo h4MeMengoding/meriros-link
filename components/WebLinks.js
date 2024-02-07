@@ -1,3 +1,5 @@
+import React from 'react'
+import { useAlert } from 'react-alert'
 import styled from "styled-components";
 import { Container } from "./ReusableStyles";
 import Link from "next/link";
@@ -6,7 +8,6 @@ import allLinks from "../data/LinksData";
 import bioData from "../data/BioData";
 
 const Links = () => {
-
   // all user info from bioData
   const name = bioData[0].name;
   const url = bioData[0].url;
@@ -63,6 +64,7 @@ const Links = () => {
   const others = allLinks.filter((el) => {
     return el.type === "other" && el.on
   });
+
 
   return (
       <LinkWrapper>
@@ -178,7 +180,7 @@ const Links = () => {
                       {(newProduct) ? <NewSection>
                         {/* <a href={newProductUrl} target="_blank" rel="noreferrer"> */}
                           <img
-                              src={'/banner.png'}
+                              src={'/soon.png'}
                               className="banner"
                               alt="rosvo-banner"
                           />
