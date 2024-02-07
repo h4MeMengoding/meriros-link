@@ -69,7 +69,7 @@ const webLinks = [
         url: '/kelas/ips-1',
         type: 'class photos',
         icon: '/album.svg',
-        on: true
+        on: false
     },
     {
         title: 'IPS 2',
@@ -114,25 +114,25 @@ const webLinks = [
         url: 'https://drive.google.com/drive/folders/1OfbssaddW4Yuaui8yPd_erNut68ejexw?usp=sharing',
         type: 'other photos',
         icon: '/album.svg',
-        on: true
+        on: false
     },
     {
         title: 'DUMP',
         url: 'https://drive.google.com/drive/folders/1GquO5ySGz-2uSEDl7FakRL5TxT2zCufA?usp=sharing',
         type: 'other photos',
         icon: '/album.svg',
-        on: true
+        on: false
     },
     {
         title: 'BTS',
         url: 'https://drive.google.com/drive/folders/1tf1veXGWplBSTVnKfoqnZ4VliRYd59Bz?usp=sharing',
         type: 'other photos',
         icon: '/album.svg',
-        on: true
+        on: false
     },
 // end other photos
     {
-        title: 'Catatan Akhir Sekolah',
+        title: 'CAS (SOON)',
         url: '',
         type: 'other',
         icon: '/yt-white.png',
