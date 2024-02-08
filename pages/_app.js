@@ -7,7 +7,8 @@ import GlobalStyle from "../styles/GlobalStyle";
 import { darkTheme, lightTheme } from "../styles/theme.config";
 import { DefaultSeo } from 'next-seo';
 import SEO from '../next-seo.config';
-import FAB from '../components/FloatingButton'
+import FAB from '../components/FloatingButton';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 function MyApp({ Component, pageProps }) {
     const darkMode = useDarkMode(false, { storageKey: null, onChange: null })
@@ -67,6 +68,7 @@ function MyApp({ Component, pageProps }) {
                     />
                     {isMounted && <Component {...pageProps} />}
                 </Layout>
+                <SpeedInsights/>
             </ThemeProvider>
         </>
 
