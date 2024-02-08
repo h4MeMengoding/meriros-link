@@ -110,6 +110,13 @@ const webLinks = [
         on: true
     },
     {
+        title: 'EKSKUL',
+        url: 'https://drive.google.com/drive/folders/17bIiIv55XK8B7PBPShjP7LM6gv8fHvJf?usp=sharing',
+        type: 'other photos',
+        icon: '/album.svg',
+        on: true
+    },
+    {
         title: 'ANGKATAN',
         url: 'https://drive.google.com/drive/folders/1OfbssaddW4Yuaui8yPd_erNut68ejexw?usp=sharing',
         type: 'other photos',
