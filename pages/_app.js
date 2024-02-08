@@ -31,6 +31,7 @@ function MyApp({ Component, pageProps }) {
             <ThemeProvider theme={theme}>
                 <Head>
                     <meta content="width=device-width, initial-scale=1" name="viewport" />
+                    <meta name="google-adsense-account" content="ca-pub-7454960383043781" />
                     <link
                         rel="icon"
                         href="/logo.jpg"
