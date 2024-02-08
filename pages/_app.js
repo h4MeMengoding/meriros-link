@@ -32,10 +32,8 @@ function MyApp({ Component, pageProps }) {
                 <Head>
                     <meta content="width=device-width, initial-scale=1" name="viewport" />
                     {/* <meta name="google-adsense-account" content="ca-pub-7454960383043781" /> */}
-                    {process.env.NODE_ENV === "production" && (
                     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7454960383043781"
                     crossorigin="anonymous"></script>
-                    )}
                     <link
                         rel="icon"
                         href="/logo.jpg"
