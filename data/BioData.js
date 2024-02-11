@@ -16,7 +16,7 @@ const bioData = [
         author: 'Ilham Shofa',
         endAuthor: 'Meriros Yerbook 24',
         endAuthorURL: 'https://github.com/h4MeMengoding/meriros-link',
-        // authorURL: 'https://twitter.com/realvjy',
+        authorURL: 'https://hame.my.id',
         footerText: 'made by',
         endText: 'for'
     },

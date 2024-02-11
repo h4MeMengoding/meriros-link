@@ -6,6 +6,7 @@ import Link from "next/link";
 import { HexIcon, NewUp, OvalIcon } from './icons';
 import allLinks from "../data/LinksData";
 import bioData from "../data/BioData";
+import { color } from 'three/examples/jsm/nodes/shadernode/ShaderNode';
 
 const Links = () => {
   // all user info from bioData
@@ -208,7 +209,7 @@ const Links = () => {
           </TopPart>
           <BottomPart>
             <LinkFoot>
-              <h4>{footerText} <a href={authorURL}>{author}</a> {endText} <a href={endAuthorURL}>{endAuthor}</a></h4>
+              <h4>{footerText} <a href={authorURL}>{author}</a> {endText} <a href={endAuthorURL}>{endAuthor}</a><p>v1.4.3</p><p>This website is not bound by anyone and was created purely by me (for complete information, click the underlined link above). Website Licensed Under GNU GPLv3. Created with NextJS 13.</p></h4>
             </LinkFoot>
           </BottomPart>
 
@@ -399,6 +400,10 @@ const LinkFoot = styled.div`
           font-size: 8px;
         }
       }
+    }
+    a{
+      text-decoration: underline;
+      font-weight: bold;
     }
 `
 

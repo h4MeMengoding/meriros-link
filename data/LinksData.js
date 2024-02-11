@@ -139,8 +139,8 @@ const webLinks = [
     },
 // end other photos
     {
-        title: 'CAS (SOON)',
-        url: '',
+        title: 'Catatan Akhir Sekolah',
+        url: '/soon',
         type: 'other',
         icon: '/yt-white.png',
         on: true
