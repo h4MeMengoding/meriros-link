@@ -69,7 +69,7 @@ const webLinks = [
         url: '/kelas/ips-1',
         type: 'class photos',
         icon: '/album.svg',
-        on: false
+        on: true
     },
     {
         title: 'IPS 2',
@@ -103,7 +103,7 @@ const webLinks = [
 
 // start other photos
     {
-        title: 'COMMITTEE',
+        title: 'PANITIA',
         url: 'https://drive.google.com/drive/folders/1V_Gju4EG3RMw8c2B0IMagc8H7cfGfZsx?usp=sharing',
         type: 'other photos',
         icon: '/album.svg',
@@ -117,18 +117,18 @@ const webLinks = [
         on: true
     },
     {
-        title: 'ANGKATAN',
-        url: 'https://drive.google.com/drive/folders/1OfbssaddW4Yuaui8yPd_erNut68ejexw?usp=sharing',
+        title: 'GURU',
+        url: 'https://drive.google.com/drive/folders/1z7P9lY6m2vXPzsBNH6BKFCM8WwKKFdG0?usp=sharing',
         type: 'other photos',
         icon: '/album.svg',
-        on: false
+        on: true
     },
     {
-        title: 'DUMP',
-        url: 'https://drive.google.com/drive/folders/1GquO5ySGz-2uSEDl7FakRL5TxT2zCufA?usp=sharing',
+        title: 'KELAS & WALKEL',
+        url: 'https://drive.google.com/drive/folders/1HIuLGqEmYYApM61jv4k3ZZgP_NFSzSiU?usp=sharing',
         type: 'other photos',
         icon: '/album.svg',
-        on: false
+        on: true
     },
     {
         title: 'BTS',
