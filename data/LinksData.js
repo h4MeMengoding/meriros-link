@@ -111,21 +111,21 @@ const webLinks = [
     },
     {
         title: 'EKSKUL',
-        url: 'https://drive.google.com/drive/folders/17bIiIv55XK8B7PBPShjP7LM6gv8fHvJf?usp=sharing',
+        url: 'https://drive.google.com/drive/folders/1xGCqbARaqiB0KffnWnyEUuR3Msruk9vr?usp=sharing',
         type: 'other photos',
         icon: '/album.svg',
         on: true
     },
     {
         title: 'GURU',
-        url: 'https://drive.google.com/drive/folders/1z7P9lY6m2vXPzsBNH6BKFCM8WwKKFdG0?usp=sharing',
+        url: 'https://drive.google.com/drive/folders/1k8JIyuGJWpyFpor42gf_XuyOjFGh14zD?usp=sharing',
         type: 'other photos',
         icon: '/album.svg',
         on: true
     },
     {
         title: 'KELAS & WALKEL',
-        url: 'https://drive.google.com/drive/folders/1HIuLGqEmYYApM61jv4k3ZZgP_NFSzSiU?usp=sharing',
+        url: 'https://drive.google.com/drive/folders/1fU-s0UHiv2p2SkneruUUoFW7uEvL13Ib?usp=sharing',
         type: 'other photos',
         icon: '/album.svg',
         on: true
