@@ -7,8 +7,8 @@ import GlobalStyle from "../styles/GlobalStyle";
 import { darkTheme, lightTheme } from "../styles/theme.config";
 import { DefaultSeo } from 'next-seo';
 import SEO from '../next-seo.config';
-import FAB from '../components/FloatingButton';
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from 'next/script';
 
 function MyApp({ Component, pageProps }) {
     const darkMode = useDarkMode(false, { storageKey: null, onChange: null })
@@ -32,8 +32,9 @@ function MyApp({ Component, pageProps }) {
                 <Head>
                     <meta content="width=device-width, initial-scale=1" name="viewport" />
                     {/* <meta name="google-adsense-account" content="ca-pub-7454960383043781" /> */}
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7454960383043781"
-                    crossOrigin="anonymous"></script>
+                    <Script async
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7454960383043781"
+                    crossOrigin="anonymous"/>
                     <link
                         rel="icon"
                         href="/logo.jpg"

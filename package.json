@@ -1,8 +1,8 @@
 {
-  "name": "realvjy",
-  "version": "5.0.0",
-  "description": "Design Wizard",
-  "author": "realvjy",
+  "name": "hamedev",
+  "version": "1.4.4",
+  "description": "SMAN 11 Semarang Yearbook Photos",
+  "author": "hamedev",
   "license": "MIT",
   "private": true,
   "scripts": {
