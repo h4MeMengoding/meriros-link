@@ -33,6 +33,7 @@ export default class MyDocument extends Document {
         return (
             <Html lang="en">
                 <Head>
+                    <meta name="google-site-verification" content="XyIRwcF70qvInoOXmDaZRRGpQMUBd20GFkcXfO1-Tqk" />
                     <script async defer src="https://analytics.hame.my.id/script.js" data-website-id="db3b38d7-35ab-4095-a9ab-fd5993d1d818"></script>
                     <link rel="preconnect" href="https://fonts.googleapis.com" />
                     <link
@@ -44,10 +45,8 @@ export default class MyDocument extends Document {
                         href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap"
                         rel="stylesheet"
                     />
-
                 </Head>
                 <body>
-
                     <Main />
                     <NextScript />
                 </body>
