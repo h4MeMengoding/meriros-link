@@ -125,7 +125,7 @@ const Mipa5 = () => {
                     </LinkSection> : ''
               }
               {/* End Photos Section */}
-                <Link href='/'>Back</Link>
+                <Link href='/' data-umami-event='Click Back Button'>Back</Link>
             </WebLinkWrap>
             {/* End Weblinks */}
           </TopPart>

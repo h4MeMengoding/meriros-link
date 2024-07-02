@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react"
-import useDarkMode from "use-dark-mode"
+import { useState, useEffect } from "react";
+import useDarkMode from "use-dark-mode";
 import Head from "next/head";
-import { ThemeProvider, styled } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import Layout from "../components/Layout";
 import GlobalStyle from "../styles/GlobalStyle";
 import { darkTheme, lightTheme } from "../styles/theme.config";
@@ -11,27 +11,20 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from 'next/script';
 
 function MyApp({ Component, pageProps }) {
-    const darkMode = useDarkMode(false, { storageKey: null, onChange: null })
-    const [isMounted, setIsMounted] = useState(false)
+    const darkMode = useDarkMode(false, { storageKey: null, onChange: null });
+    const [isMounted, setIsMounted] = useState(false);
 
-    // const [theme, setTheme] = useState("dark")
-
-    // const themeToggler = () => {
-    //     theme === "dark" ? setTheme("lightTheme") : setTheme("dark")
-    // }
     const theme = darkMode.value ? darkTheme : lightTheme;
 
     useEffect(() => {
         setIsMounted(true);
-    }, [])
+    }, []);
 
     return (
         <>
-            {/* <ThemeProvider theme={theme === "dark" ? darkTheme : lightTheme}> */}
             <ThemeProvider theme={theme}>
                 <Head>
                     <meta content="width=device-width, initial-scale=1" name="viewport" />
-                    {/* <meta name="google-adsense-account" content="ca-pub-7454960383043781" /> */}
                     <Script async
                     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7454960383043781"
                     crossOrigin="anonymous"/>
@@ -41,9 +34,10 @@ function MyApp({ Component, pageProps }) {
                         type="image/jpg"
                         sizes="48x48"
                     />
-
+                    <link rel="preconnect" href="https://fonts.googleapis.com" />
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+                    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
                 </Head>
-                {/* <button onClick={() => themeToggler()}>Theme</button> */}
                 <GlobalStyle />
                 <Layout>
                     <DefaultSeo
@@ -72,10 +66,10 @@ function MyApp({ Component, pageProps }) {
                     />
                     {isMounted && <Component {...pageProps} />}
                 </Layout>
-                <SpeedInsights/>
+                <SpeedInsights />
             </ThemeProvider>
         </>
-
-    )
+    );
 }
-export default MyApp
+
+export default MyApp;

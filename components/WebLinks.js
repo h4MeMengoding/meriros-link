@@ -130,7 +130,7 @@ const Links = () => {
               </LinkSection>
               {/* Social Icon */}
 
-              {/* Photos Section */}
+              {/* Bagian Kelas */}
               {
                 photos.length > 0 ?
                     <LinkSection>
@@ -138,9 +138,9 @@ const Links = () => {
                       {
                         photos.map((i) => {
                           return (
-                              <Link href={i.url} key={i.title} rel="noreferrer" className="text-center">
+                              <Link data-umami-event={`Click Class Photos - ${i.title}`} href={i.url} key={i.title} rel="noreferrer" className="text-center">
                                 <LinkBox>
-                                  <LinkTitle><img alt="rosvo-icon-album" src={i.icon} />
+                                  <LinkTitle><img style={{ width: '30', height: '30px' }} alt="rosvo-icon-album" src={i.icon} />
                                   </LinkTitle> {i.title}<NewUp />
                                 </LinkBox>
                               </Link>
@@ -149,9 +149,9 @@ const Links = () => {
                       }
                     </LinkSection> : ''
               }
-              {/* End Photos Section */}
+              {/* End Bagian Kelas */}
 
-              {/* PhotosOther Section */}
+              {/* Bagian Other Foto*/}
               {
                 photosOther.length > 0 ?
                     <LinkSection>
@@ -159,9 +159,9 @@ const Links = () => {
                       {
                         photosOther.map((i) => {
                           return (
-                              <Link href={i.url} key={i.title} rel="noreferrer">
+                              <Link data-umami-event={`Click Other Photos - ${i.title}`} href={i.url} key={i.title} rel="noreferrer">
                                 <LinkBox>
-                                  <LinkTitle><img alt="rosvo-icon-album" src={i.icon} /></LinkTitle> {i.title} <NewUp />
+                                  <LinkTitle><img style={{ width: '30', height: '30px' }} alt="rosvo-icon-album" src={i.icon} /></LinkTitle> {i.title} <NewUp />
                                 </LinkBox>
                               </Link>
                           )
@@ -169,9 +169,9 @@ const Links = () => {
                       }
                     </LinkSection> : ''
               }
-              {/* End Photos Section */}
+              {/* End Bagian Other Foto*/}
 
-              {/* Other Section */}
+              {/* Bagian Other */}
               {
                 others.length > 0 ?
                     <LinkSection>
@@ -192,9 +192,9 @@ const Links = () => {
                       {
                         others.map((i) => {
                           return (
-                              <a href={i.url} key={i.title} rel="noreferrer">
+                              <a data-umami-event={`Click ${i.title}`} href={i.url} key={i.title} rel="noreferrer">
                                 <LinkBox>
-                                  <LinkTitle><img alt="rosvo-icon-youtube" src={i.icon} /></LinkTitle> {i.title} <NewUp />
+                                  <LinkTitle><img style={{ width: '30', height: '30px' }} alt="rosvo-icon-youtube" src={i.icon} /></LinkTitle> {i.title} <NewUp />
                                 </LinkBox>
                               </a>
                           )
@@ -202,14 +202,14 @@ const Links = () => {
                       }
                     </LinkSection> : ''
               }
-              {/* End Other Section */}
+              {/* End Bagian Other */}
 
             </WebLinkWrap>
             {/* End Weblinks */}
           </TopPart>
           <BottomPart>
             <LinkFoot>
-              <h4>{footerText} <a href={authorURL}>{author}</a> {endText} <a href={endAuthorURL}>{endAuthor}</a><p>v1.4.4</p><p>This website is not bound by anyone and was created purely by me (for complete information, click the underlined link above). Website Licensed Under GNU GPLv3. Created with NextJS 13.</p></h4>
+              <h4>{footerText} <a data-umami-event='Click Ilham Shofa Website' href={authorURL}>{author}</a> {endText} <a data-umami-event='Click Merirosvo Github' href={endAuthorURL}>{endAuthor}</a><p>v1.4.4</p><p>This website is not bound by anyone and was created purely by me (for complete information, click the underlined link above). Website Licensed Under GNU GPLv3. Created with NextJS 13.</p></h4>
             </LinkFoot>
           </BottomPart>
 
