@@ -48,7 +48,7 @@ const Ips4 = () => {
   return (
       <LinkWrapper>
       <Head>
-        <title>ROSVO | IPS 4</title>
+        <title>Meriros - IPS 4</title>
       </Head>
         <LinkContainer>
           <TopPart>

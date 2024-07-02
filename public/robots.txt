@@ -2,8 +2,5 @@
 User-agent: *
 Allow: /
 
-# Host
-Host: https://rosvo.hame.my.id
-
 # Sitemaps
 Sitemap: https://rosvo.hame.my.id/sitemap.xml

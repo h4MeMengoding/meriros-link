@@ -48,7 +48,7 @@ const Mipa2 = () => {
   return (
       <LinkWrapper>
       <Head>
-        <title>ROSVO | MIPA 2</title>
+        <title>Meriros - MIPA 2</title>
       </Head>
         <LinkContainer>
           <TopPart>

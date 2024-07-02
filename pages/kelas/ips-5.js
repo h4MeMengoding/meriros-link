@@ -48,7 +48,7 @@ const Ips5 = () => {
   return (
       <LinkWrapper>
       <Head>
-        <title>ROSVO | IPS 5</title>
+        <title>Meriros - IPS 5</title>
       </Head>
         <LinkContainer>
           <TopPart>

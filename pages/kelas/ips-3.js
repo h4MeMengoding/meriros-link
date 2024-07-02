@@ -48,7 +48,7 @@ const Ips3 = () => {
   return (
       <LinkWrapper>
       <Head>
-        <title>ROSVO | IPS 3</title>
+        <title>Meriros - IPS 3</title>
       </Head>
         <LinkContainer>
           <TopPart>
