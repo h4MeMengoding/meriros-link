@@ -11,7 +11,7 @@ export default {
             {
                 width: 1200,
                 height: 630,
-                url: `https://i.imgur.com/Ahwfq56.jpg`,
+                url: `https://i.imgur.com/Ahwfq56.jpeg`,
             },
         ],
         site_name: 'rosvo',
