@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 export default function Custom404() {
-  const [seconds, setSeconds] = useState(4); // Inisialisasi dengan 3 detik
+  const [seconds, setSeconds] = useState(4); // Inisialisasi dengan 4 detik
   const [redirecting, setRedirecting] = useState(false); // State untuk memulai pengalihan
 
   useEffect(() => {
@@ -15,7 +15,27 @@ export default function Custom404() {
       setRedirecting(true);
       // Tunggu 1 detik sebelum melakukan redirect
       setTimeout(() => {
-        window.location.href = "https://youtu.be/aYxkRVJSMBA?si=BxcJOjTCb8R7rFWc"; // Ganti dengan URL YouTube yang sesuai
+        // Coba membuka aplikasi YouTube dengan deep link
+        const youtubeAppURL = "youtube://aYxkRVJSMBA?si=BxcJOjTCb8R7rFWc";
+        const youtubeWebURL = "https://youtu.be/aYxkRVJSMBA?si=BxcJOjTCb8R7rFWc";
+
+        // Cek apakah perangkat bisa membuka YouTube dengan deep link
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        
+        if (isMobile) {
+          const iframe = document.createElement('iframe');
+          iframe.style.display = 'none';
+          iframe.src = youtubeAppURL;
+          document.body.appendChild(iframe);
+          
+          // Setelah 2 detik, jika aplikasi tidak terbuka, buka YouTube di browser
+          setTimeout(() => {
+            window.location.href = youtubeWebURL;
+          }, 2000); // Tunggu 2 detik untuk memastikan aplikasi YouTube tidak terbuka
+        } else {
+          // Buka YouTube di browser untuk desktop
+          window.location.href = youtubeWebURL;
+        }
       }, 1000); // Tunggu 1 detik sebelum redirect
     }
   }, [seconds]); // Hook ini akan dipanggil setiap kali nilai 'seconds' berubah
