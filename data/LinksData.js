@@ -140,7 +140,7 @@ const webLinks = [
 // end other photos
     {
         title: 'Catatan Akhir Sekolah',
-        url: 'https://youtu.be/aYxkRVJSMBA?si=BxcJOjTCb8R7rFWc',
+        url: '/redirect-to-yt',
         type: 'other',
         icon: '/yt-white.png',
         on: true
