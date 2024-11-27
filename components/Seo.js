@@ -25,7 +25,7 @@ export default function Seo({ page }) {
                             alt: `${title}`,
                         },
                     ],
-                    site_name: 'hame.my.id',
+                    site_name: 'ilhamsh.my.id',
                 }}
                 twitter={{
                     handle: '',

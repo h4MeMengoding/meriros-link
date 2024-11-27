@@ -140,14 +140,14 @@ const webLinks = [
 // end other photos
     {
         title: 'Catatan Akhir Sekolah',
-        url: '/soon',
+        url: 'https://youtu.be/aYxkRVJSMBA?si=BxcJOjTCb8R7rFWc',
         type: 'other',
         icon: '/yt-white.png',
         on: true
     },
     {
         title: 'Instagram Promnight',
-        url: 'https://instagram.com/merirosvo.24',
+        url: '/bataltotal',
         type: 'other',
         icon: '/instagram.png',
         on: true

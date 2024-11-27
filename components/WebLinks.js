@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import { useAlert } from 'react-alert'
 import styled from "styled-components";
 import { Container } from "./ReusableStyles";
@@ -27,6 +27,22 @@ const Links = () => {
   const endText = bioData[0].endText;
   const titleImage = "/logo.png";
 
+  const [lastUpdated, setLastUpdated] = useState(null);
+
+  useEffect(() => {
+    const fetchLastCommit = async () => {
+      try {
+        const response = await fetch('/api/last-commit');
+        const data = await response.json();
+        setLastUpdated(data.lastUpdated);
+      } catch (error) {
+        console.error('Failed to fetch commit data:', error);
+      }
+    };
+
+    fetchLastCommit();
+  }, []);
+
   // Check what class to use oval or hex for avatar
   const avatarShape = bioData[0].nftAvatar ? `nft-clipped` : `oval-clipped`
 
@@ -51,7 +67,7 @@ const Links = () => {
   const photos = allLinks.filter((el) => {
     return el.type === "class photos" && el.on
   });
-  
+
   const photosOther = allLinks.filter((el) => {
     return el.type === "other photos" && el.on
   });
@@ -68,153 +84,158 @@ const Links = () => {
 
 
   return (
-      <LinkWrapper>
-        <LinkContainer>
-          <TopPart>
-            <LinkHeader>
-              <Avatar>
-                <AvatarWrap>
-                  {/* Avatar svg  hex or oval if nftAvatar=true will convert to hex */}
-                  <HexIcon />
-                  <OvalIcon />
-                  <div className={`${avatarShape} avatar-border`}></div>
-                  <div className={`${avatarShape} avatar-fill`}></div>
-                  <img
-                      src={avatarImg}
-                      className={avatarShape}
-                      aria-label="owl-rosvo-logo"
-                  />
-                </AvatarWrap>
-              </Avatar>
-              <Title>
-                {/* Using titleimg flag to use image as title or text */}
-                {titleImg ?
-                    <img
-                      src={titleImage}
-                      className="handle"
-                      aria-label="rosvo-txt"
-                      /> :
-                    <h1>{name}</h1>
-                }
-                {/* if your remove username from data it will not appear */}
+    <LinkWrapper>
+      <LinkContainer>
+        <TopPart>
+          <LinkHeader>
+            <Avatar>
+              <AvatarWrap>
+                {/* Avatar svg  hex or oval if nftAvatar=true will convert to hex */}
+                <HexIcon />
+                <OvalIcon />
+                <div className={`${avatarShape} avatar-border`}></div>
+                <div className={`${avatarShape} avatar-fill`}></div>
+                <img
+                  src={avatarImg}
+                  className={avatarShape}
+                  aria-label="owl-rosvo-logo"
+                />
+              </AvatarWrap>
+            </Avatar>
+            <Title>
+              {/* Using titleimg flag to use image as title or text */}
+              {titleImg ?
+                <img
+                  src={titleImage}
+                  className="handle"
+                  aria-label="rosvo-txt"
+                /> :
+                <h1>{name}</h1>
+              }
+              {/* if your remove username from data it will not appear */}
+              {
+                username ? <h3><a href={`${url}`}>{username}</a></h3> : ''
+              }
+            </Title>
+          </LinkHeader>
+
+          {/* Bio Section */}
+          <LinkBio>
+            {description && <h1>{descriptionText}</h1>}
+            {subdesc && <h4>{subdescText}</h4>}
+          </LinkBio>
+          {/* End Bio Section */}
+
+          {/* Weblinks started */}
+          <WebLinkWrap>
+            {/* Social Icon */}
+            <LinkSection className="social">
+              <div className="iconsonly">
                 {
-                  username ? <h3><a href={`${url}`}>{username}</a></h3> : ''
+                  social.map((i) => {
+                    return (
+                      <a href={i.url} key={i.title} target="_blank" rel="noreferrer">
+                        <LinkBox className="socialIcon">
+                          <img src={i.icon} style={{ filter: 'var(--img)' }} />
+                        </LinkBox>
+                      </a>
+                    )
+                  })
                 }
-              </Title>
-            </LinkHeader>
+              </div>
+            </LinkSection>
+            {/* Social Icon */}
 
-            {/* Bio Section */}
-            <LinkBio>
-              {description && <h1>{descriptionText}</h1>}
-              {subdesc && <h4>{subdescText}</h4>}
-            </LinkBio>
-            {/* End Bio Section */}
-
-            {/* Weblinks started */}
-            <WebLinkWrap>
-              {/* Social Icon */}
-              <LinkSection className="social">
-                <div className="iconsonly">
+            {/* Bagian Kelas */}
+            {
+              photos.length > 0 ?
+                <LinkSection>
+                  <h3>{photos[0].type}</h3>
                   {
-                    social.map((i) => {
+                    photos.map((i) => {
                       return (
-                          <a href={i.url} key={i.title} target="_blank" rel="noreferrer">
-                            <LinkBox className="socialIcon">
-                              <img src={i.icon} style={{ filter: 'var(--img)' }} />
-                            </LinkBox>
-                          </a>
+                        <Link data-umami-event={`Click Class Photos - ${i.title}`} href={i.url} key={i.title} rel="noreferrer" className="text-center">
+                          <LinkBox>
+                            <LinkTitle><img style={{ width: '30', height: '30px' }} alt="rosvo-icon-album" src={i.icon} />
+                            </LinkTitle> {i.title}<NewUp />
+                          </LinkBox>
+                        </Link>
                       )
                     })
                   }
-                </div>
-              </LinkSection>
-              {/* Social Icon */}
+                </LinkSection> : ''
+            }
+            {/* End Bagian Kelas */}
 
-              {/* Bagian Kelas */}
-              {
-                photos.length > 0 ?
-                    <LinkSection>
-                      <h3>{photos[0].type}</h3>
-                      {
-                        photos.map((i) => {
-                          return (
-                              <Link data-umami-event={`Click Class Photos - ${i.title}`} href={i.url} key={i.title} rel="noreferrer" className="text-center">
-                                <LinkBox>
-                                  <LinkTitle><img style={{ width: '30', height: '30px' }} alt="rosvo-icon-album" src={i.icon} />
-                                  </LinkTitle> {i.title}<NewUp />
-                                </LinkBox>
-                              </Link>
-                          )
-                        })
-                      }
-                    </LinkSection> : ''
-              }
-              {/* End Bagian Kelas */}
+            {/* Bagian Other Foto*/}
+            {
+              photosOther.length > 0 ?
+                <LinkSection>
+                  <h3>{photosOther[0].type}</h3>
+                  {
+                    photosOther.map((i) => {
+                      return (
+                        <Link data-umami-event={`Click Other Photos - ${i.title}`} href={i.url} key={i.title} rel="noreferrer">
+                          <LinkBox>
+                            <LinkTitle><img style={{ width: '30', height: '30px' }} alt="rosvo-icon-album" src={i.icon} /></LinkTitle> {i.title} <NewUp />
+                          </LinkBox>
+                        </Link>
+                      )
+                    })
+                  }
+                </LinkSection> : ''
+            }
+            {/* End Bagian Other Foto*/}
 
-              {/* Bagian Other Foto*/}
-              {
-                photosOther.length > 0 ?
-                    <LinkSection>
-                      <h3>{photosOther[0].type}</h3>
-                      {
-                        photosOther.map((i) => {
-                          return (
-                              <Link data-umami-event={`Click Other Photos - ${i.title}`} href={i.url} key={i.title} rel="noreferrer">
-                                <LinkBox>
-                                  <LinkTitle><img style={{ width: '30', height: '30px' }} alt="rosvo-icon-album" src={i.icon} /></LinkTitle> {i.title} <NewUp />
-                                </LinkBox>
-                              </Link>
-                          )
-                        })
-                      }
-                    </LinkSection> : ''
-              }
-              {/* End Bagian Other Foto*/}
+            {/* Bagian Other */}
+            {
+              others.length > 0 ?
+                <LinkSection>
+                  <h3>{others[0].type}</h3>
+                  {/* BioData.js > newProduct == true */}
+                  {/* New Section will render once newProduct == true */}
+                  {(newProduct) ? <NewSection>
+                    {/* <a href={newProductUrl} target="_blank" rel="noreferrer"> */}
+                    <img
+                      src={'/banner.png'}
+                      className="banner"
+                      alt="rosvo-banner"
+                    />
+                    {/* </a> */}
+                  </NewSection> : ''
+                  }
+                  {/* End Biodata.js, You can move this section anywhere */}
+                  {
+                    others.map((i) => {
+                      return (
+                        <a data-umami-event={`Click ${i.title}`} href={i.url} key={i.title} rel="noreferrer">
+                          <LinkBox>
+                            <LinkTitle><img style={{ width: '30', height: '30px' }} alt="rosvo-icon-youtube" src={i.icon} /></LinkTitle> {i.title} <NewUp />
+                          </LinkBox>
+                        </a>
+                      )
+                    })
+                  }
+                </LinkSection> : ''
+            }
+            {/* End Bagian Other */}
 
-              {/* Bagian Other */}
-              {
-                others.length > 0 ?
-                    <LinkSection>
-                      <h3>{others[0].type}</h3>
-                      {/* BioData.js > newProduct == true */}
-                      {/* New Section will render once newProduct == true */}
-                      {(newProduct) ? <NewSection>
-                        {/* <a href={newProductUrl} target="_blank" rel="noreferrer"> */}
-                          <img
-                              src={'/soon.png'}
-                              className="banner"
-                              alt="rosvo-banner"
-                          />
-                        {/* </a> */}
-                      </NewSection> : ''
-                      }
-                      {/* End Biodata.js, You can move this section anywhere */}
-                      {
-                        others.map((i) => {
-                          return (
-                              <a data-umami-event={`Click ${i.title}`} href={i.url} key={i.title} rel="noreferrer">
-                                <LinkBox>
-                                  <LinkTitle><img style={{ width: '30', height: '30px' }} alt="rosvo-icon-youtube" src={i.icon} /></LinkTitle> {i.title} <NewUp />
-                                </LinkBox>
-                              </a>
-                          )
-                        })
-                      }
-                    </LinkSection> : ''
-              }
-              {/* End Bagian Other */}
+          </WebLinkWrap>
+          {/* End Weblinks */}
+        </TopPart>
+        <BottomPart>
+          <LinkFoot>
+            <h4>{footerText} <a data-umami-event='Click Ilham Shofa Website' href={authorURL}>{author}</a> {endText} <a data-umami-event='Click Merirosvo Github' href={endAuthorURL}>{endAuthor}</a><p>v1.4.4</p><p>This website uses the realvjy base and is completely developed and customized by me. (for complete information, click the underlined link above). Created with NextJS 13.</p></h4>
+            <h5>Terakhir diperbarui: {lastUpdated ? (
+              <pre>{lastUpdated}</pre>
+            ) : (
+              <p>Loading...</p>
+            )}<p>(Data terakhir diatas diambil dari API github secara realtime)</p></h5>
+          </LinkFoot>
+        </BottomPart>
 
-            </WebLinkWrap>
-            {/* End Weblinks */}
-          </TopPart>
-          <BottomPart>
-            <LinkFoot>
-              <h4>{footerText} <a data-umami-event='Click Ilham Shofa Website' href={authorURL}>{author}</a> {endText} <a data-umami-event='Click Merirosvo Github' href={endAuthorURL}>{endAuthor}</a><p>v1.4.4</p><p>This website is not bound by anyone and was created purely by me (for complete information, click the underlined link above). Website Licensed Under GNU GPLv3. Created with NextJS 13.</p></h4>
-            </LinkFoot>
-          </BottomPart>
-
-        </LinkContainer>
-      </LinkWrapper>
+      </LinkContainer>
+    </LinkWrapper>
 
   )
 };
@@ -400,6 +421,20 @@ const LinkFoot = styled.div`
           font-size: 8px;
         }
       }
+    }
+    h5{
+      line-height: 1.2;
+      margin-top: 18px;
+      letter-spacing: -.2px;
+      font-size: 14px;
+        font-weight: 500;
+        @media screen and (max-width: ${({ theme }) => theme.deviceSize.tablet}) {
+          font-size: 12px;
+        }
+      font-weight: bold;
+    }
+    p{
+      color: ${({ theme }) => theme.text.secondary};
     }
     a{
       text-decoration: underline;
