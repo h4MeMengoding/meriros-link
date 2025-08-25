@@ -6,7 +6,6 @@ import Link from "next/link";
 import { HexIcon, NewUp, OvalIcon } from './icons';
 import allLinks from "../data/LinksData";
 import bioData from "../data/BioData";
-import { color } from 'three/examples/jsm/nodes/shadernode/ShaderNode';
 
 const Links = () => {
   // all user info from bioData

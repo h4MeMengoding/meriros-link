@@ -71,7 +71,7 @@ export default function SEOTracking() {
       <Script
         id="organization-schema"
         type="application/ld+json"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
