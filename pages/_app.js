@@ -25,9 +25,6 @@ function MyApp({ Component, pageProps }) {
             <ThemeProvider theme={theme}>
                 <Head>
                     <meta content="width=device-width, initial-scale=1" name="viewport" />
-                    <Script async
-                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7454960383043781"
-                    crossOrigin="anonymous"/>
                     <link
                         rel="icon"
                         href="/logo.jpg"
@@ -38,6 +35,9 @@ function MyApp({ Component, pageProps }) {
                     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
                     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
                 </Head>
+                <Script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7454960383043781"
+                crossOrigin="anonymous"/>
                 <GlobalStyle />
                 <Layout>
                     <DefaultSeo

@@ -1,6 +1,35 @@
 # *
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /404
+Disallow: /bataltotal
+Disallow: /redirect-to-yt
+Disallow: /soon
+Crawl-delay: 1
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /404
+Disallow: /bataltotal
+Disallow: /redirect-to-yt
+Disallow: /soon
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+Disallow: /404
+Disallow: /bataltotal
+Disallow: /redirect-to-yt
+Disallow: /soon
+Crawl-delay: 1
+
+# Host
+Host: https://rosvo.ilhame.id
 
 # Sitemaps
-Sitemap: https://rosvo.hame.my.id/sitemap.xml
+Sitemap: https://rosvo.ilhame.id/sitemap.xml
+Sitemap: https://rosvo.ilhame.id/feed.xml
