@@ -31,5 +31,7 @@ Crawl-delay: 1
 Host: https://rosvo.ilhame.id
 
 # Sitemaps
+Sitemap: https://rosvo.ilhame.id/sitemap-0.xml
 Sitemap: https://rosvo.ilhame.id/sitemap.xml
+Sitemap: https://rosvo.ilhame.id/api/sitemap
 Sitemap: https://rosvo.ilhame.id/feed.xml

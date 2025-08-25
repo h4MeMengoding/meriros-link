@@ -2,10 +2,11 @@
 module.exports = {
     siteUrl: 'https://rosvo.ilhame.id',
     generateRobotsTxt: false, // Disable karena sudah ada robots.txt manual di public/
-    generateIndexSitemap: false,
+    generateIndexSitemap: true, // Enable untuk membuat sitemap-0.xml
     sitemapSize: 7000,
     changefreq: 'daily',
     priority: 0.7,
+    autoLastmod: true,
     exclude: [
         '/api/*',
         '/server-sitemap.xml',
@@ -13,6 +14,10 @@ module.exports = {
         '/bataltotal',
         '/redirect-to-yt',
         '/soon'
+    ],
+    // URL untuk server-side sitemap
+    additionalSitemaps: [
+        'https://rosvo.ilhame.id/server-sitemap.xml',
     ],
     additionalPaths: async (config) => {
         const result = []
@@ -29,28 +34,6 @@ module.exports = {
                 loc: `/kelas/${className}`,
                 changefreq: 'weekly',
                 priority: 0.9,
-                lastmod: new Date().toISOString(),
-                // Add alternative languages properly
-                alternateRefs: [
-                    {
-                        href: `https://rosvo.ilhame.id/kelas/${className}`,
-                        hreflang: 'id',
-                    },
-                    {
-                        href: `https://rosvo.ilhame.id/kelas/${className}`,
-                        hreflang: 'x-default',
-                    }
-                ]
-            })
-        })
-        
-        // Add alternative routes for home page
-        const homeAliases = ['/links', '/lnk', '/l']
-        homeAliases.forEach(alias => {
-            result.push({
-                loc: alias,
-                changefreq: 'daily',
-                priority: 0.8,
                 lastmod: new Date().toISOString(),
             })
         })
