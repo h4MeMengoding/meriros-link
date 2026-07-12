@@ -14,7 +14,7 @@
     All raw photo files for SMAN 11 Semarang 2024 yearbook
     <br />
     <br />
-    <a href="https://rosvo.hame.my.id">View Site</a>
+    <a href="https://rosvo.ilhame.id">View Site</a>
     ·
     <a href="https://github.com/h4MeMengoding/meriros-link/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·

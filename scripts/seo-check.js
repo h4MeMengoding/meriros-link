@@ -3,7 +3,7 @@ const fs = require('fs')
 const path = require('path')
 const glob = require('glob')
 
-const siteUrl = 'https://rosvo.hame.my.id'
+const siteUrl = 'https://rosvo.ilhame.id'
 const publicDir = path.join(__dirname, '..', 'public')
 const pagesDir = path.join(__dirname, '..', 'pages')
 

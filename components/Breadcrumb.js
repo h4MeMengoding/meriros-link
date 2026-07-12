@@ -38,7 +38,7 @@ export default function Breadcrumb() {
       "@type": "ListItem",
       "position": index + 1,
       "name": item.name,
-      "item": `https://rosvo.hame.my.id${item.href}`
+      "item": `https://rosvo.ilhame.id${item.href}`
     }))
   }
 
